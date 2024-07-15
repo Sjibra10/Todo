@@ -1,0 +1,170 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 20px; /* Add margin for better spacing */
+}
+
+header {
+    padding: 20px;
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a73e8; /* Match the iOS blue color */
+}
+
+.add-todo-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-todo-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px; /* Adjust font size for better readability */
+}
+
+.add-todo-form button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-todo-form button:hover {
+    background-color: #155ab6; /* Darker blue on hover */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.todo-item label {
+    flex-grow: 1;
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+
+.todo-item a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #1a73e8;
+}
+
+.add-todo {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.add-todo input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+.add-todo button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-todo button:hover {
+    background-color: #155ab6;
+}
+
+.update-todo {
+    padding: 20px;
+}
+
+.update-todo input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.update-todo button {
+    padding: 10px 15px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.update-todo button:hover {
+    background-color: #155ab6;
+}
+
+.todo-item form button {
+    padding: 10px 15px;
+    background-color: #ff3b30; /* Red color similar to iOS delete button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.todo-item form button:hover {
+    background-color: #cc2c23; /* Darker red on hover */
+}

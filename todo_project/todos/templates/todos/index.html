@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Todo List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Todo List</h1>
-    <ul>
-        {% for todo in todos %}
-        <li>
-            <a href="{% url 'update_todo' todo.id %}">{{ todo.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'add_todo' %}">Add Todo</a>
+    <div class="container">
+        <header>
+            <h1>Todo App</h1>
+        </header>
+        <ul class="todo-list">
+            {% for todo in todos %}
+            <li class="todo-item">
+                <input type="checkbox" id="todo-{{ todo.id }}" {% if todo.completed %}checked{% endif %}>
+                <label for="todo-{{ todo.id }}">{{ todo.text }}</label>
+                <a href="{% url 'update_todo' todo.id %}">{{ todo.title }}</a>
+                {% if todo.completed %}
+                <form method="post" action="{% url 'delete_todo' todo.id %}" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="add-todo">
+            <h2>Add Todo</h2>
+            <form method="post" action="{% url 'add_todo' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

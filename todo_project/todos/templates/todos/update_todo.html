@@ -2,13 +2,21 @@
 <html>
 <head>
     <title>Update Todo</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Update Todo</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Update</button>
-    </form>
+    <div class="container">
+        <header>
+            <h1>Update Todo</h1>
+        </header>
+        <div class="update-todo">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
