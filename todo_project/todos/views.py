@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Todo
 from .forms import TodoForm
 
+
+def landing_page(request):
+    return render(request, 'landing_page.html')
+
 def index(request):
     todos = Todo.objects.all()
     return render(request, 'todos/index.html', {'todos': todos})

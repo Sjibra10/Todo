@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App Landing Page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Todo App</a>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="{% url 'index' %}" class="btn">Launch App</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cover Section -->
+    <section class="cover">
+        <div class="cover-content">
+            <img src="{% static 'images/cover-image.png' %}" alt="Cover Image" class="cover-image">
+            <h1 class="project-name">Todo App</h1>
+            <p class="project-tagline">Manage your tasks efficiently and effortlessly</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="{% static 'images/logo.jpeg' %}" alt="Feature 1">
+                    <h3>Add Tasks</h3>
+                    <p>You can add any number of tasks</p>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'images/logo1.jpeg' %}" alt="Feature 2">
+                    <h3>Delete</h3>
+                    <p>Delete done tasks.</p>
+                </div>
+                <div class="feature">
+                    <img src="{% static 'images/logo2.png' %}" alt="Feature 3">
+                    <h3>Update</h3>
+                    <p>Update information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About This Project</h2>
+            <p>This project was inspired by the need to manage tasks efficiently. It serves as a Portfolio Project for Holberton School.</p>
+            <p>Team Members:</p>
+            <p>GitHub Repository: <a href="https://github.com/Sjibra10/Todo">Todo App Repository</a></p>
+        </div>
+    </section>
+</body>
+</html>
