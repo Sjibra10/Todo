@@ -9,7 +9,7 @@ This is a simple todo app built using Django and Python. The app is designed to 
 - Tasks are organized by categories
 
 ## Installation
-1. Clone the repository: `git clone <repository_url>`
+1. Clone the repository: `git clone https://github.com/Sjibra10/Todo/`
 2. Install requirements: `pip install -r requirements.txt`
 3. Run migrations: `python manage.py migrate`
 4. Start the server: `python manage.py runserver`
